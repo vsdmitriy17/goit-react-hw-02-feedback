@@ -30,11 +30,13 @@ class App extends Component {
     };
     
     render() {
+        const stateKeys = Object.keys(this.state);
         const { good, neutral, bad } = this.state;
         return (
             <div className={styles.container}>
                 <SectionTitle title="Please leave feedback">
                     <Feedback
+                        options={stateKeys}
                         onLeaveFeedback={this.feedBackIncrement}
                     />
                 </SectionTitle>
