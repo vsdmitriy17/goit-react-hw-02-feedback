@@ -5,10 +5,10 @@ export default function Feedback({ options, onLeaveFeedback })  {
     
         return (
             <ul className={styles.feedback_btnList}>
-                {options.map((option, index) => {
+                {options.map((option) => {
                     return (
-                        <li className={styles.feedback_btnList__item} key={index}>
-                            <button type="button" className={styles.feedback_btn} onClick={onLeaveFeedback}>{option.toUpperCase()}</button>
+                        <li className={styles.feedback_btnList__item} key={option}>
+                            <button type="button" className={styles.feedback_btn} onClick={() => onLeaveFeedback(option)}>{option.toUpperCase()}</button>
                         </li>
                     );
                 })}

@@ -12,11 +12,10 @@ class App extends Component {
         bad: 0
     }
 
-    feedBackIncrement = (evt) => {
-        const feedBack = evt.currentTarget.textContent.toLowerCase();
+    feedBackIncrement = (option) => {
         this.setState((prevState) => {
             return {
-                [feedBack]: prevState[feedBack] + 1,
+                [option]: prevState[option] + 1,
             }
         });
     };
